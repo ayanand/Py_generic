@@ -4,10 +4,10 @@ import pandas as pd
 from datetime import datetime
 
 DRIVER     = "ODBC Driver 17 for SQL Server"
-USERNAME   = "regbcp"
-PSSWD      = "regbcp"
-SERVERNAME = "regiccsmi.76755b4f90dd.database.windows.net"
-DB         = "STG"
+USERNAME   = ""
+PSSWD      = ""
+SERVERNAME = ""
+DB         = ""
 
 print(datetime.now());
 engine = sqlalchemy.create_engine(
