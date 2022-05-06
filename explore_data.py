@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 fn="GE2022_Elector_List_20220502_0605.dat";
-df = pd.read_csv("C:\\Users\\Ayush.Anand\\OneDrive - electionson\\Documents\\tmp\\GE2022_TiP_Extracts_20220502_0605\\DAT\\"+fn,sep="\t",low_memory=False);
+df = pd.read_csv("C:\\Users\\Ayush.Anand\\Documents\\tmp\\DAT\\"+fn,sep="\t",low_memory=False);
 print(pd.io.sql.get_schema(df.reset_index(), 'data'));
 df =df.astype('str')
 print('create table ',fn,'    (')
