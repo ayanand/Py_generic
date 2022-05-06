@@ -15,7 +15,7 @@ engine = sqlalchemy.create_engine(
 )
 conn = engine.connect();
 fn="GE2022_Address_Register_20220502_0605.dat";
-df = pd.read_csv("C:\\Users\\Ayush.Anand\\OneDrive - electionson\\Documents\\tmp\\GE2022_TiP_Extracts_20220502_0605\\DAT\\"+fn,sep="\t",low_memory=False);
+df = pd.read_csv("C:\\Users\\Ayush.Anand\\Documents\\tmp\\DAT\\"+fn,sep="\t",low_memory=False);
 df['filename']=fn;
 table = fn.split('.')[0];
 df.head(10).to_sql(table, con=conn, index=False,chunksize=10000,schema="dbo", if_exists='replace')
